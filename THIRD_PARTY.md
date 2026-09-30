@@ -39,6 +39,7 @@ The U-Net and Wiener checkpoint files found in the working tree had no
 redistribution authorization recorded. They are excluded. The separately
 received private Finn implementation is not part of this repository.
 
-No license is assigned to the internship code in this snapshot. Public
-release and any later license choice require confirmation of the author's and
-host institution's rights. This does not alter third-party licenses.
+The author has confirmed permission to publish the internship code and the
+selected aggregate figures in this snapshot. No reuse license is assigned to
+that code; publication does not alter third-party licenses or grant rights to
+excluded datasets and checkpoints.

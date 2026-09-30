@@ -97,5 +97,6 @@ basis. The entry points above accept `--help` for their remaining settings.
 This directory contains student-written experiments and adaptations. The
 upstream implementation, Finn's privately shared code, datasets, and weights
 are not redistributed. External origins and licensing constraints are listed
-in [THIRD_PARTY.md](THIRD_PARTY.md). No license is assigned to this internship
-code until its publication rights have been confirmed.
+in [THIRD_PARTY.md](THIRD_PARTY.md). The author has confirmed permission to
+publish this research code and the selected aggregate figures. No reuse
+license has been assigned to the internship code.
