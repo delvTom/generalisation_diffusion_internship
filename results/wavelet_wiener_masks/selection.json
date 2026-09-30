@@ -1,0 +1,10 @@
+{
+  "selected_budget_rgb_sites": 9,
+  "calibration_scores": {
+    "9": 0.05875502645402153,
+    "25": 0.06631227607612192
+  },
+  "artem_threshold": 0.05,
+  "artem_mask_rule": "scalar row/diagonal, global max, then RGB-site OR",
+  "generation_mask_interpolation": "nearest of five measured times"
+}

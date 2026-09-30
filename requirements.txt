@@ -1,0 +1,8 @@
+# Core CPU experiments. Select a compatible PyTorch/CUDA wheel separately.
+numpy>=1.26,<3
+torch>=2.2,<3
+torchvision>=0.17,<1
+PyWavelets>=1.5,<2
+matplotlib>=3.8,<4
+Pillow>=10,<13
+scipy>=1.11,<2

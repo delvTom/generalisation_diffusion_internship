@@ -1,0 +1,7 @@
+# Additional dependencies for scripts using the external FM U-Net and upstream code.
+-r requirements.txt
+omegaconf>=2.3,<3
+torchcfm==1.0.7
+torchmetrics>=1.4,<2
+torch-fidelity>=0.3,<1
+tqdm>=4.66,<5

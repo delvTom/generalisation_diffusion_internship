@@ -1,0 +1,57 @@
+experiment:
+  seed: 42
+  device: cuda
+  allow_device_fallback: true
+  dtype: float32
+  output_root: spectral_paths/sequential_linear_schedule/results
+  run_name: null
+  append_timestamp: true
+
+dataset:
+  config_path: configs/pca_locality/cifar10.yaml
+  batch_size: 512
+  num_workers: 4
+  subset_size: null
+
+pca:
+  cache_dir: spectral_paths/sequential_linear_schedule/cache/pca_cifar10_population
+  source_wiener_dir: data/models/wiener/cifar10_32
+  reuse_sample_covariance_cache: true
+  force_recompute: false
+
+schedule:
+  epsilon_1: 0.05
+
+evaluation:
+  # The visual grid reproduces the legacy experiments' pixel-space draw.
+  visual_num_samples: 5
+  visual_noise_seed: 42
+
+  # Numerical MSE uses an independent, larger spectral-noise batch.
+  mse_num_samples: 256
+  noise_seed: 314159
+
+  # Historical classic-FM Wiener sampler used in the earlier experiments.
+  # These references are added to the visual grid and diagnostics, not FID.
+  classic_wiener_step_counts: [30, 120]
+
+  # D denotes the number of PCA components (D=3072 for CIFAR-10).
+  report_step_counts: [120, "2D", "20D"]
+  final_error_step_counts: [60, 120, 240, 480, 960, "1D", "2D", "4D", "8D", "20D"]
+  time_curve_step_counts: [120, "2D", "20D"]
+  time_curve_max_points: 1200
+  euler_time_chunk_size: 256
+
+fid:
+  enabled: true
+  num_generated: 10000
+  num_real: 50000
+  batch_size: 128
+  feature: 2048
+  seed: 271828
+  real_statistics_cache: spectral_paths/sequential_linear_schedule/cache/fid_cifar10_train_50000_torch_fidelity_2048.pt
+  # Null uses the standard torch-fidelity weights, downloaded on first use.
+  feature_extractor_weights_path: null
+
+plot:
+  dpi: 200
